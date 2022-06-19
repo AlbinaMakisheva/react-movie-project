@@ -1,8 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import HomePage from "./pages/homePage";
-
-const sample = {
+const sampleData = {
     adult: false,
     backdrop_path: "/5Iw7zQTHVRBOYpA0V6z0yypOPZh.jpg",
     belongs_to_collection: {
@@ -83,12 +79,4 @@ const sample = {
     vote_count: 9692,
 };
 
-const movies = [sample, sample, sample, sample, sample, sample, sample];
-
-const App = () => {
-    return (
-        <HomePage movies={movies} />
-    );
-};
-
-ReactDOM.render(<App />, document.getElementById("root"));
+export default sampleData;
