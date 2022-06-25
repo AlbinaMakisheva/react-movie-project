@@ -22,6 +22,7 @@ const chip = { margin: 0.5 };
 const MovieDetails = (props) => {
     const movie = props.movie
 
+
     return (
         <>
             <Typography variant="h5" component="h3">

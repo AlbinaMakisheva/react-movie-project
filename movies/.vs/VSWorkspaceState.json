@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\headerMovie",
+    "\\src\\components\\headerMovieList",
+    "\\src\\components\\movieDetails",
+    "\\src\\components\\movieList",
+    "\\src\\images",
+    "\\src\\pages",
+    "\\src\\stories"
+  ],
+  "SelectedNode": "\\src\\pages\\homePage.js",
+  "PreviewInSolutionExplorer": false
+}
