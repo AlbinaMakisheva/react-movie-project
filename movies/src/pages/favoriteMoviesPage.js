@@ -3,7 +3,9 @@ import PageTemplate from "../components/templateMovieListPage";
 import { MoviesContext } from "../contexts/moviesContext";
 import { useQueries } from "react-query";
 import { getMovie } from "../api/tmdb-api";
-import Spinner from '../components/spinner'
+import Spinner from '../components/spinner';
+import RemoveFromFavorites from "../components/cardIcons/removeFromFavorites";
+import WriteReview from "../components/cardIcons/writeReview";
 
 const FavoriteMoviesPage = () => {
 
@@ -29,6 +31,7 @@ const FavoriteMoviesPage = () => {
         q.data.genre_ids = q.data.genres.map(g => g.id)
         return q.data
     });
+
     const toDo = () => true;
    
 
@@ -36,7 +39,14 @@ const FavoriteMoviesPage = () => {
         <PageTemplate
             title="Favourite Movies"
             movies={movies}
-            selectFavorite={toDo}
+            action={(movie) => {   //introducing the render prop
+                return (
+                <>
+                    <RemoveFromFavorites movie={movie} />
+                    <WriteReview movie={movie} />
+                </>
+            );
+            }}
         />
     );
 };
