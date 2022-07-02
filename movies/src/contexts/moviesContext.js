@@ -4,6 +4,7 @@ export const MoviesContext = React.createContext(null);
 
 const MoviesContextProvider = (props) => {
     const [favorites, setFavorites] = useState([])
+    const [mustW, setMustW]= useState([])
 
     const addToFavorites = (movie) => {
         let newFavorites = [];
@@ -20,12 +21,23 @@ const MoviesContextProvider = (props) => {
         ))
     };
 
+    const addToPL = (movie) => {
+        let newMustW = [];
+        if (!mustW.includes(movie.id)) {
+            newMustW=[...mustW, movie.id]
+        }
+        setMustW(newMustW)
+
+    }
+
     return (
         <MoviesContext.Provider //operates as a context provider
             value={{
                 favorites,
                 addToFavorites,
-                removeFromFavorites
+                removeFromFavorites,
+                addToPL,
+                mustW
             }}
         >
             {props.children} //Container pattern  to compose it with other components
