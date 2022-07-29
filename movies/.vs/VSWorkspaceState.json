@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\headerMovie",
-    "\\src\\components\\headerMovieList",
-    "\\src\\components\\movieDetails",
-    "\\src\\components\\movieList",
-    "\\src\\images",
-    "\\src\\pages",
-    "\\src\\stories"
+    "\\src\\components\\cardIcons",
+    "\\src\\components\\movieReview",
+    "\\src\\components\\siteHeader",
+    "\\src\\components\\spinner",
+    "\\src\\contexts",
+    "\\src\\hooks"
   ],
-  "SelectedNode": "\\src\\pages\\homePage.js",
+  "SelectedNode": "\\src\\contexts\\moviesContext.js",
   "PreviewInSolutionExplorer": false
 }

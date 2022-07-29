@@ -7,7 +7,7 @@ import { getMovieImages } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 
-const TemplateMoviePage = ({ movie, children }) => { // children prop provides the opportunity to create a reusable template
+const TemplateMoviePage = ({ movie, children }) => {
     const { data, error, isLoading, isError } = useQuery(
         ["images", { id: movie.id }],
         getMovieImages
